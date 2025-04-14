@@ -1,0 +1,10 @@
+1) create web page that has 5 inspirational stories. 
+    each story should be inside div tag. 
+        must have name inside heading tag 
+        must have at least 3 paragraphs. each paragraphs must have at least 100 words 
+        must have summery of the story 
+        each story should be hindi language 
+2) create web page that has different regions
+    each region should have IPL team names 
+    each team should have player name 
+    create this web page using list tags 
