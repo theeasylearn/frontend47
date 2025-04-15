@@ -8,3 +8,6 @@
     each region should have IPL team names 
     each team should have player name 
     create this web page using list tags 
+
+3) create web page display IPL any one team using table tag 
+    should have logo, team name, home ground, Achievements, key players, introduction 
