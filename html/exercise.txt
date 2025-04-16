@@ -11,3 +11,12 @@
 
 3) create web page display IPL any one team using table tag 
     should have logo, team name, home ground, Achievements, key players, introduction 
+
+4) create your resume using only html tag.
+https://images.template.net/wp-content/uploads/2018/11/Free-Basic-Resume-Template2.jpg
+
+5) create forgot password page. 
+
+6) create a website gujartirecipes.com 
+    1 Home 
+    2 Categories 
