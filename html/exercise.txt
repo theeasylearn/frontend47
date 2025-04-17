@@ -17,6 +17,7 @@ https://images.template.net/wp-content/uploads/2018/11/Free-Basic-Resume-Templat
 
 5) create forgot password page. 
 
-6) create a website gujartirecipes.com 
-    1 Home 
-    2 Categories 
+7) create webpage to search for hotel as per makemytrip.com 
+
+8) create register page same as facebook register page 
+
