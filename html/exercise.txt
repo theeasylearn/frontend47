@@ -21,3 +21,4 @@ https://images.template.net/wp-content/uploads/2018/11/Free-Basic-Resume-Templat
 
 8) create register page same as facebook register page 
 
+9) create registration page for shaadi.com 

@@ -9,7 +9,6 @@ html entities list
 https://symbl.cc/en/html-entities/
 https://www.htmlsymbols.xyz
 
-
 FOR ICONS
 https://www.iconfinder.com/
 
@@ -23,17 +22,17 @@ https://www.iana.org/assignments/media-types/media-types.xhtml#application
 for random images 
 https://picsum.photos/
 example 
- <img src="https://picsum.photos/300" />
+<img src="https://picsum.photos/300" />
 
-for box shadow example 
-https://getcssscan.com/css-box-shadow-examples
+ for box shadow example 
+ https://getcssscan.com/css-box-shadow-examples
 
 for color pallets 
 https://colorhunt.co/
 
 
- for html, css, javascript 
- https://developer.mozilla.org
+for html, css, javascript 
+https://developer.mozilla.org
 
  for css 
  https://developer.mozilla.org/en-US/docs/Web/CSS
@@ -67,7 +66,7 @@ https://www.photopea.com/
 for free map 
 https://www.openstreetmap.org
 
-for gallary 
+for gallery 
 http://fancybox.net/home
 
 
@@ -80,3 +79,8 @@ http://html5test.com/
 
 
 https://alternativeto.net/
+
+
+for javascript 
+https://javascript.info/
+
