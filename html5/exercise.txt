@@ -1,0 +1,2 @@
+create a web page that has article for each and every indian states. 
+    article should state name, language, capital, history, places to visit, Food to taste, Items to buy etc. 
