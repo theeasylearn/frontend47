@@ -1,0 +1,16 @@
+/* only css code (no need of style tag) 
+    https://www.figma.com/resource-library/color-combinations/
+    Combination 34: Quite clear
+    /* Restaurant */
+*/
+* 
+{
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+body 
+{
+    background-color: #f2f2f2;
+}
