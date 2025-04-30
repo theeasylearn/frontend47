@@ -3,14 +3,56 @@
     Combination 34: Quite clear
     /* Restaurant */
 */
-* 
-{
-    margin: 0px;
-    padding: 0px;
+
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100%;
+    width: 100%;
+}
+
+* {
+    margin: 0px !important;
+    padding: 0px !important;
     letter-spacing: 1px;
     font-size: 20px;
 }
+
 body 
 {
     background-color: #f2f2f2;
+}
+#site-header 
+{
+    background-color: #4d1717;
+    /* change layout using flex */
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.logo 
+{
+    height: 100px;
+    width: 100px;
+}
+
+#menu 
+{
+    /* change layout using flex (from vertical to horizontal) */
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+}
+.menu-link 
+{
+    color:white;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: large;
+    text-transform: uppercase;
+}
+.contact-no 
+{
+    font-size: xx-large;
 }
