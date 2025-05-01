@@ -12,8 +12,8 @@ html, body {
 }
 
 * {
-    margin: 0px !important;
-    padding: 0px !important;
+    margin: 0px;
+    padding: 0px;
     letter-spacing: 1px;
     font-size: 20px;
 }
@@ -41,18 +41,97 @@ body
 {
     /* change layout using flex (from vertical to horizontal) */
     display: flex;
+    gap: 20px;
     list-style-type: none;
     align-items: center;
 }
 .menu-link 
 {
     color:white;
-    padding-right: 10px;
-    padding-left: 10px;
-    font-size: large;
+    font-size: x-large;
     text-transform: uppercase;
 }
 .contact-no 
 {
     font-size: xx-large;
+}
+#banner 
+{
+    height:600px;
+}
+/* banner has child image then only style will apply  */
+#banner>img 
+{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+#banner-text 
+{
+    position: absolute;
+    top: 300px;
+    width:100%;
+    text-align: center;
+}
+#banner-text>h1 
+{
+    font-size:84px;
+    color:white;
+}
+#banner-text>p 
+{
+    font-size:42px;
+    color:yellow;
+}
+#whyus 
+{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+#whyus>article 
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding:10px;
+    width:20%;
+    border: 3px solid brown;
+    text-align: center;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+#whyus>article>img 
+{
+    height:128px;
+}
+#aboutus>header 
+{
+    text-align: center;
+    font-size: 48px;
+    color:brown;
+}
+#aboutus>article>div 
+{
+    display: flex;
+}
+#aboutus>article>div>p 
+{
+    width:40%;
+}
+#aboutus>article>div>div 
+{
+    width:60%;
+}
+#aboutus>article>div>div 
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+#aboutus>article>div>div>img 
+{
+    width:calc(50% - 20px);
+
 }
