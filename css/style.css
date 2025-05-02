@@ -89,6 +89,7 @@ body
     display: flex;
     gap: 20px;
     justify-content: center;
+    
 }
 
 #whyus>article 
@@ -106,11 +107,18 @@ body
 {
     height:128px;
 }
-#aboutus>header 
+#aboutus, #party-hall 
+{
+    background-color:  #4d1717;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+#aboutus>header, #party-hall>header 
 {
     text-align: center;
     font-size: 48px;
-    color:brown;
+    color:white;
+
 }
 #aboutus>article>div 
 {
@@ -133,5 +141,72 @@ body
 #aboutus>article>div>div>img 
 {
     width:calc(50% - 20px);
+}
+#about-us-p
+{
+    padding:0px 20px; /* 1st value top-bottom 2nd value left and right */
+    text-align: justify;
+    text-indent: 50px;
+    color:white;
+}
 
+#testimonials
+{
+    padding-top:20px;
+    padding-bottom:20px;
+}
+#testimonials>header, #party-hall>header 
+{
+    text-align: center;
+    font-size: 48px;
+}
+#testimonials>div
+{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding-top: 10px;
+}
+#testimonials>div>article
+{
+    width:25%;
+    background-color: #cbcbcb;
+    text-align: center;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+#testimonials>div>article>header 
+{
+    background-color: #174d38;
+    color:white;
+    padding:10px;
+    font-size: x-large;
+}
+#testimonials>div>article>footer 
+{
+    font-weight: bold;
+    font-size: x-large;
+}
+#party-hall
+{
+    height: 400px;
+}
+#party-hall>div 
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+#party-hall>div>figure 
+{
+    width:20%;
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+}
+#party-hall img 
+{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
 }
