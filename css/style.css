@@ -3,6 +3,8 @@
     Combination 34: Quite clear
     /* Restaurant */
 */
+/* font cdn */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 html, body {
     margin: 0 !important;
@@ -16,6 +18,12 @@ html, body {
     padding: 0px;
     letter-spacing: 1px;
     font-size: 20px;
+    font-family: "Lato", sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6, header 
+{
+    font-family: "Playfair Display", serif;
 }
 
 body 
@@ -113,12 +121,15 @@ body
     padding-top:20px;
     padding-bottom:20px;
 }
+
 #aboutus>header, #party-hall>header 
+{
+    color:white;
+}
+#aboutus>header, #party-hall>header , #contactus>header
 {
     text-align: center;
     font-size: 48px;
-    color:white;
-
 }
 #aboutus>article>div 
 {
@@ -190,7 +201,8 @@ body
 }
 #party-hall
 {
-    height: 400px;
+    height: 420px;
+    padding-bottom: 20px;
 }
 #party-hall>div 
 {
@@ -209,4 +221,63 @@ body
     width: 100%;
     height: 100%;
     object-fit: fill;
+}
+#party-hall>header 
+{
+    margin:10px 0px 20px 0px; /* clock wise top right bottom left */   
+}
+#contactus>header 
+{
+    color:brown;
+}
+#contactus>article 
+{
+    display: flex;
+}
+/* select 1st div of contactus>article */
+#contactus>article>div:first-child 
+{
+    padding:10px;
+    width:50%;
+}
+#contactus>article>div:first-child>p:first-child ,
+#contactus>article>div:nth-child(2)>p:first-child
+{
+    font-weight: bold;
+    font-size: x-large;
+}
+#contactus>article>div:nth-child(2)>p:first-child
+{
+    text-align: center;
+}
+#contactus>article>div:first-child>p
+{
+    line-height: 200%;
+}
+#contactus>article>div:nth-child(2)>span 
+{
+    display: block;
+    flex-direction: column;
+    padding-top:20px;
+    padding-right: 20px;
+}
+#contactus>article>div:nth-child(2)>span>input, #contactus>article>div:nth-child(2)>span>textarea 
+{
+    margin-bottom: 15px;
+    width:100%;
+    padding:10px;
+} 
+#contactus>article>div:nth-child(2)>span>input[type='submit']
+{
+    background-color: #4d1717;
+    color:white;
+    padding:10px;
+}
+#site-footer 
+{
+    background-color: #4d1717;
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    padding:10px;
 }
