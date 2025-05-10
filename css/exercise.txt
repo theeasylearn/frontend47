@@ -68,6 +68,7 @@ HTML Code to Use:
 
 Instructions:
 
+
     Paste this in your HTML file.
 
     Write CSS to style the div:
@@ -81,3 +82,17 @@ Instructions:
         Add box-shadow: 4px 4px 10px #ccc;
 
         Use margin: 15px; to create space between elements
+
+Exercise 4
+Insert meaningful content and css code to format it in 13_media_query_demo3.html 
+
+
+recreate 13_media_query_demo3.html as responsive website using flex.
+
+Exercise 5 
+develop below design using grid 
+https://vaadin.com/documents/411367/0/css-grid-elements.jpg/f106b6b6-8270-4f94-98be-e870a8758c4f?t=1502746410246
+
+Exercise 6 
+develop below design using grid 
+https://miro.medium.com/v2/resize:fit:1400/1*PitZH36g1vTvLx9Nr-GjVw.png
