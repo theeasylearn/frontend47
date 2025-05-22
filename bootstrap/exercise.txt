@@ -34,3 +34,6 @@
 4) create vertical form to open account 
 
 5) create horizontal form for change password 
+
+6) create non responsive horizontal menu with dark background & light text color (like amazon)
+
