@@ -1,5 +1,12 @@
 1) display your resume using document.write method.
 
+loop
+-----------------------
+1) create web page that accept number from user using prompt and display multiplication table of given number in table tag. use javascript. 
+
+2) create web page that accept 2 number, start and stop from user using prompt and display multiplication table of given between start and stop in table tag. use javascript. 
+
+
 2) create web page for simple interest calculator using bootstrap. calculate and display interest when user click on button. 
 3) create web page for income taxt calculator using bootstrap for new text regime. calculate and display interest when user click on button. 
 
