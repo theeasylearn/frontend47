@@ -4,6 +4,11 @@ loop
 -----------------------
 1) create web page that accept number from user using prompt and display multiplication table of given number in table tag. use javascript. 
 
+
+event 
+---------------
+interest calculator for simple and compound interest calculation based upon user input and choice(radio button)
+
 2) create web page that accept 2 number, start and stop from user using prompt and display multiplication table of given between start and stop in table tag. use javascript. 
 
 
