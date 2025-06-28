@@ -7,7 +7,13 @@ loop
 
 event 
 ---------------
-interest calculator for simple and compound interest calculation based upon user input and choice(radio button)
+1) interest calculator for simple and compound interest calculation based upon user input and choice(radio button)
+
+2) extends example 15_event_handling_2.html and findout who is winner. accept name from user 
+
+3) extends above 2 example to develop of tic tac where one player will be computer.
+
+4) develop minesweeper game. 
 
 2) create web page that accept 2 number, start and stop from user using prompt and display multiplication table of given between start and stop in table tag. use javascript. 
 
