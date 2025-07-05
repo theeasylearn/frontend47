@@ -85,7 +85,7 @@
                             <th>Delete</th>
                         </tr>
                     </thead>
-                    <tbody id="productTable">
+                    <tbody id="bill">
                         <!-- Rows will appear here -->
                     </tbody>
                 </table>
@@ -97,6 +97,40 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
         crossorigin="anonymous"></script>
+    <script>
+        //create class 
+        class Product 
+        {
+            constructor(name,price,quantity,tax)
+            {
+                //property variable/state 
+                this.name = name;
+                this.price = parseInt(price);
+                this.quantity = parseInt(quantity);
+                this.tax = parseInt(tax);
+                this.total = ((this.price * this.quantity)) + 
+                parseFloat(((this.price * this.quantity)* this.tax/100)); 
+            }
+            add()
+            {
+                let row = 
+                    `<tr>
+                        <td>1</td>
+                        <td>${this.name}</td>
+                        <td>${this.price}</td>
+                        <td>${this.quantity}</td>
+                        <td>${this.tax}</td>
+                        <td>${this.total}</td>
+                        <td></td>
+                    </tr>`;
+                    document.getElementById('bill').innerHTML+= row;
+            }
+            
+        }
+        //create object 
+        var p1 = new Product('abc',100,10,5);
+        p1.add();
+    </script>
 </body>
 
 </html>
