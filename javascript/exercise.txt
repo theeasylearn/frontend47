@@ -24,7 +24,7 @@ event
 4) complete tic tac in two player mode
 5) complete tic tac in one player vs computer 
 
-6) convert amount into words in 13_event.html (upto 100 crore)
+6) convert amount into words in  (upto 100 crore)
 input : 12345 
 output : ten thousand three hundred forty five.
 special instruction : without decision making statement.
