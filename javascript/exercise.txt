@@ -50,4 +50,6 @@ map function
     display source, destination, Bus Type, Price, Departure time, no of seats 
     display data in bootstrap table format, use array of object 
 
-3) 
+3) filter bus routes based upon source and destination when user press search button. if bus is not available on given source and destination display message but not found. 
+
+4) filter example 1 based upon team name when user click on specific team name button.
