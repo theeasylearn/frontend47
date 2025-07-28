@@ -5,22 +5,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 //create virtual DOM
 const root = ReactDOM.createRoot(document.getElementById('root'));
 function Member(person) {
-    let prefix;
-    if(person.gender === true)
-    {
-        prefix = "Mr. ";
-    }    
-    else 
-    {
-        prefix = "Miss/Mrs. ";
-    }
     return (<div className="col-md-4 mb-4">
         <div className="card">
             <div className="card-header">
-                <h5 className="card-title">{prefix} {person.name}</h5>
+                <h5 className="card-title">{person.name}</h5>
             </div>
             <div className="card-body">
                 <p className="card-text"><strong>Date of Birth:</strong> {person.dob}</p>
+                <p className="card-text"><strong>Gender:</strong> {person.gender}</p>
                 <p className="card-text"><strong>Weight:</strong> {person.weight} kg</p>
                 <p className="card-text"><strong>Education:</strong> {person.degree}</p>
             </div>
@@ -29,8 +21,8 @@ function Member(person) {
 }
 let person1 = {
     name: 'Ankit Patel',
-    dob:'12-07-1985',
-    gender:true,
+    dob:'12-july-1985',
+    gender:'Male',
     weight:75.99,
     degree:'mca'
 }
