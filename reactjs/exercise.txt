@@ -7,10 +7,7 @@
     Average 
 
     create user defined function like 6_function.js 
-
 2) modify 7_condition.js display month Name in date of birth using decision making statement. 
-
-
 3) develop digital clock, and display time in 12 hours format(am/pm). use decision making statement.
 
 
