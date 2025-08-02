@@ -1,63 +1,89 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import "bootstrap/dist/css/bootstrap.min.css";
-//create class components 
-class Team extends React.Component {
-    //create constructor
-    constructor(props)
-    {
+class CartItem extends React.Component {
+    constructor(props) {
         super(props);
         //create property variable
         this.name = props.name;
-        this.flag = props.flag;
+        this.description = props.description;
+        this.price = props.price;
+        this.photo = props.photo;
+        //if variable's value change and then if you use it in render method then it should state 
+        this.state = {
+            quantity: props.quantity
+        }
+    }
+    //event handling function (must be created as arrow function)
+    updateQuantity = (mode) => {
+        switch (mode) {
+            case '+':
+                this.setState({
+                    quantity: parseInt(this.state.quantity) + 1
+                });
+                break;
+
+            case '-':
+                if (parseInt(this.state.quantity) > 1) {
+                    this.setState({
+                        quantity: parseInt(this.state.quantity) - 1
+                    });
+                }
+                break;
+        }
     }
     render() {
-        return (<div className="col-lg-4 mb-3">
-            <div className="card shadow">
-                <div className="card-body">
-                    <div className="row">
-                        <div className="col-lg-3">
-                            <img src={this.flag} alt />
-                        </div>
-                        <div className="col-lg-9">
-                            <h2 className="fs-4 text-uppercase">{this.name}</h2>
-                        </div>
-                    </div>
+        return (<div className="row align-items-center">
+            <div className="col-2">
+                <img src={this.photo} alt="Pizza Oven" className="item-img" />
+            </div>
+            <div className="col-2">
+                <h5 className="card-title">{this.name}</h5>
+                <p className="text-muted">{this.description}</p>
+            </div>
+            <div className="col-2 text-center">
+                <p className="card-text">
+                    {this.price}
+                </p>
+            </div>
+            <div className="col-2">
+                <div className="input-group">
+                    <button className="btn btn-outline-secondary" type="button"
+                        onClick={() => this.updateQuantity('-')}>-</button>
+                    <input type="text" className="form-control text-center" value={this.state.quantity} readOnly />
+                    <button className="btn btn-outline-secondary" type="button"
+                        onClick={() => this.updateQuantity('+')}>+</button>
                 </div>
+            </div>
+            <div className="col-2 text-end">
+                <p className="card-text fw-bold">
+                    {this.price * this.state.quantity}
+                </p>
+            </div>
+            <div className="col-2">
+                <button className="btn btn-danger">Delete</button>
             </div>
         </div>);
     }
 }
-class Cricket extends React.Component {
-    render() {
-        return (<div className="container mt-4">
-            <div className="row">
-                <div className="col-12 border-bottom my-3">
-                    <h1>Cricket Teams</h1>
+function Cart() {
+    return (<div className="container mt-4">
+        <div className="cart-header text-center">
+            <h2>Your Cart</h2>
+        </div>
+        <div className="row mt-4">
+            <div className="col-12">
+                <div className="card mb-3">
+                    <div className="card-body">
+                        <CartItem name='IPhone' photo='http://picsum.photos/100?random=1' description='apple smartphone' price='100000' quantity='1' />
+                        <CartItem name='Macbook air' photo='http://picsum.photos/100?random=2' description='apple laptop' price='125000' quantity='1' />
+                        <CartItem name='Airpods' photo='http://picsum.photos/100?random=3' description='apple earbuds' price='25001' quantity='1' />
+                    </div>
                 </div>
-                <Team name="India" flag="https://flagsapi.com/IN/flat/64.png" />
-                <Team name="Australia" flag="https://flagsapi.com/AU/flat/64.png" />
-                <Team name="England" flag="https://flagsapi.com/GB/flat/64.png" />
-                <Team name="South Africa" flag="https://flagsapi.com/ZA/flat/64.png" />
-                <Team name="New Zealand" flag="https://flagsapi.com/NZ/flat/64.png" />
-                <Team name="Pakistan" flag="https://flagsapi.com/PK/flat/64.png" />
-                <Team name="Sri Lanka" flag="https://flagsapi.com/LK/flat/64.png" />
-                <Team name="Bangladesh" flag="https://flagsapi.com/BD/flat/64.png" />
-                <Team name="Afghanistan" flag="https://flagsapi.com/AF/flat/64.png" />
-                <Team name="Zimbabwe" flag="https://flagsapi.com/ZW/flat/64.png" />
-                <Team name="Ireland" flag="https://flagsapi.com/IE/flat/64.png" />
-                <Team name="Scotland" flag="https://flagsapi.com/GB/flat/64.png" />
-                <Team name="Netherlands" flag="https://flagsapi.com/NL/flat/64.png" />
-                <Team name="Nepal" flag="https://flagsapi.com/NP/flat/64.png" />
-                <Team name="United Arab Emirates" flag="https://flagsapi.com/AE/flat/64.png" />
-                <Team name="Namibia" flag="https://flagsapi.com/NA/flat/64.png" />
-                <Team name="United States" flag="https://flagsapi.com/US/flat/64.png" />
-                <Team name="Canada" flag="https://flagsapi.com/CA/flat/64.png" />
-                <Team name="Oman" flag="https://flagsapi.com/OM/flat/64.png" />
             </div>
         </div>
-        );
-    }
+    </div>
+    );
 }
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Cricket />)
+root.render(<Cart />)
