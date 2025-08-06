@@ -2,23 +2,55 @@ import React from "react";
 class DinningTable extends React.Component {
     constructor(props) {
         super(props); //required 
+        console.log('constructor called....')
         //property variable
         this.name = props.name;
         this.tableno = props.tableno;
+        this.thaliPrice = 100;
+        this.chasPrice = 7;
+        this.rotiPrice = 5;
+        this.sweetPrice = 13;
+        this.papadPrice = 11;
         //state object
         this.state = {
             thali: 0,
             roti: 0,
             chas: 0,
             papad: 0,
-            sweet: 0
+            sweet: 0,
+            total: 0
         }
+    }
+
+    componentWillMount() {
+        console.log('componentWillMount method called...');
+    }
+    componentDidMount() {
+        console.log('componentDidMount method called...');
+    }
+
+    shouldComponentUpdate(nextProp, nextState) {
+        console.log('shouldComponentUpdate method called...');
+        console.log(nextState);
+        if(nextState.thali<5)
+        {
+            return true;
+        }
+        else 
+        {
+            return false;
+        }
+
+    }
+    componentWillUpdate(nextProp, nextState) {
+        console.log('componentWillUpdate method called...');
+        console.log(nextState);
     }
     //arrow function
     updateThali = () => {
         // this.state.thali = this.state.thali + 1 won't work because thali is state
         this.setState({
-            thali: this.state.thali + 1
+            thali: this.state.thali + 1,
         });
     }
 
@@ -46,6 +78,7 @@ class DinningTable extends React.Component {
         });
     }
     render() {
+        console.log('render method called...');
         return (<div className="col-lg-3">
             <div className="card shadow">
                 <div className="card-header d-flex justify-content-between">
@@ -87,10 +120,31 @@ class DinningTable extends React.Component {
                     </div>
                 </div>
                 <div className="card-footer">
-                    <h6>Total 1500</h6>
+                    <h6>Total {this.state.total}</h6>
                 </div>
             </div>
         </div>);
+    }
+
+    componentDidUpdate(prevProp, prevState) {
+        console.log('componentDidUpdate method called...');
+        console.log(prevState);
+        // here state variable must be updated conditionally
+        if (prevState.thali != this.state.thali ||
+            prevState.chas != this.state.chas ||
+            prevState.roti != this.state.roti ||
+            prevState.sweet != this.state.sweet ||
+            prevState.papad != this.state.papad
+        
+        ) {
+            this.setState({
+                total: (this.thaliPrice * this.state.thali) +
+                    (this.chasPrice * this.state.chas) +
+                    (this.rotiPrice * this.state.roti) +
+                    (this.sweetPrice * this.state.sweet) +
+                    (this.papadPrice * this.state.papad)
+            });
+        }
     }
 }
 export default DinningTable
