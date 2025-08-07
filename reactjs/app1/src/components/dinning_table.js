@@ -32,12 +32,15 @@ class DinningTable extends React.Component {
     shouldComponentUpdate(nextProp, nextState) {
         console.log('shouldComponentUpdate method called...');
         console.log(nextState);
-        if(nextState.thali<5)
+        if(nextState.thali === this.state.thali || nextState.thali<=5)
         {
             return true;
         }
         else 
         {
+            this.setState({
+                thali:5
+            });
             return false;
         }
 

@@ -6,9 +6,9 @@ class Resturant extends React.Component {
             <div className="container mt-4">
                 <div className="row">
                     <DinningTable name='Diya Patel' tableno='1' />
-                    {/* <DinningTable name='Kartik bhatt' tableno='2' />
+                    <DinningTable name='Kartik bhatt' tableno='2' />
                     <DinningTable name='Asit Mali' tableno='3' />
-                    <DinningTable name='Rahul Mehta' tableno='4' /> */}
+                    <DinningTable name='Rahul Mehta' tableno='4' />
                 </div>
             </div>
         );
