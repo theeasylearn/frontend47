@@ -80,6 +80,11 @@ class DinningTable extends React.Component {
             papad: this.state.papad + 1
         });
     }
+
+    CloseTable = () => {
+        //alert(this.tableno);
+        this.props.tableClose(this.tableno);
+    }
     render() {
         console.log('render method called...');
         return (<div className="col-lg-3">
@@ -122,8 +127,9 @@ class DinningTable extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="card-footer">
+                <div className="card-footer d-flex justify-content-between">
                     <h6>Total {this.state.total}</h6>
+                    <button onClick={this.CloseTable} type="button" className="btn btn-danger btn-sm">close table</button>
                 </div>
             </div>
         </div>);
