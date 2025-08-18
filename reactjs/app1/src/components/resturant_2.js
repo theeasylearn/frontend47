@@ -24,9 +24,11 @@ class Resturant extends React.Component {
     }
 
     onTableClose = (tableNo) => {
-        // alert(tableNo);//
+        alert('received table no ' + tableNo);
         this.setState({
             tables: this.state.tables.filter(table => table.tableno !== tableNo)
+        },()=>{
+            console.log(this.state.tables); 
         });
     }
     render() {
@@ -60,7 +62,11 @@ class Resturant extends React.Component {
                         {
                             this.state.tables.map((item) => {
                                 // console.log(item);
-                                return <DinningTable name={item.name} tableno={item.tableno} tableClose={this.onTableClose} />
+                                return <DinningTable 
+                                key={item.tableno}
+                                name={item.name} 
+                                tableno={item.tableno} 
+                                tableClose={this.onTableClose} />
                             })
                         }
                     </div>

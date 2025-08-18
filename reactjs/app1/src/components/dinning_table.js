@@ -2,7 +2,7 @@ import React from "react";
 class DinningTable extends React.Component {
     constructor(props) {
         super(props); //required 
-        console.log('constructor called....')
+        // console.log('constructor called....')
         //property variable
         this.name = props.name;
         this.tableno = props.tableno;
@@ -23,15 +23,15 @@ class DinningTable extends React.Component {
     }
 
     componentWillMount() {
-        console.log('componentWillMount method called...');
+        // console.log('componentWillMount method called...');
     }
     componentDidMount() {
-        console.log('componentDidMount method called...');
+        // console.log('componentDidMount method called...');
     }
 
     shouldComponentUpdate(nextProp, nextState) {
-        console.log('shouldComponentUpdate method called...');
-        console.log(nextState);
+        // console.log('shouldComponentUpdate method called...');
+        // console.log(nextState);
         if(nextState.thali === this.state.thali || nextState.thali<=5)
         {
             return true;
@@ -46,8 +46,8 @@ class DinningTable extends React.Component {
 
     }
     componentWillUpdate(nextProp, nextState) {
-        console.log('componentWillUpdate method called...');
-        console.log(nextState);
+        // console.log('componentWillUpdate method called...');
+        // console.log(nextState);
     }
     //arrow function
     updateThali = () => {
@@ -82,11 +82,11 @@ class DinningTable extends React.Component {
     }
 
     CloseTable = () => {
-        //alert(this.tableno);
+        // alert(this.tableno);
         this.props.tableClose(this.tableno);
     }
     render() {
-        console.log('render method called...');
+        // console.log('render method called...');
         return (<div className="col-lg-3">
             <div className="card shadow">
                 <div className="card-header d-flex justify-content-between">
@@ -136,8 +136,8 @@ class DinningTable extends React.Component {
     }
 
     componentDidUpdate(prevProp, prevState) {
-        console.log('componentDidUpdate method called...');
-        console.log(prevState);
+        // console.log('componentDidUpdate method called...');
+        // console.log(prevState);
         // here state variable must be updated conditionally
         if (prevState.thali != this.state.thali ||
             prevState.chas != this.state.chas ||
