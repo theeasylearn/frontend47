@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import "bootstrap/dist/css/bootstrap.min.css";
-import Menu from './components/menu';
+import Scoreboard from './components/scoreboard';
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Menu />)
+root.render(<Scoreboard />)

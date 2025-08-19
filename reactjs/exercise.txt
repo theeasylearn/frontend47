@@ -10,13 +10,10 @@
 2) modify 7_condition.js display month Name in date of birth using decision making statement. 
 3) develop digital clock, and display time in 12 hours format(am/pm). use decision making statement.
 
-
 4) display cricket match score board of 4 different match using bootstrap responsive layout. refer 
 https://www.cricbuzz.com/
 
 5) display cricket match schedule of different tours using bootstrap. 
 https://www.cricbuzz.com/cricket-schedule/upcoming-series/international
 
-
 6) update scoreboard.js file, calculate and display total runs, balls, strike rate 
-
