@@ -16,3 +16,7 @@ https://www.cricbuzz.com/
 
 5) display cricket match schedule of different tours using bootstrap. 
 https://www.cricbuzz.com/cricket-schedule/upcoming-series/international
+
+
+6) update scoreboard.js file, calculate and display total runs, balls, strike rate 
+
