@@ -17,3 +17,7 @@ https://www.cricbuzz.com/
 https://www.cricbuzz.com/cricket-schedule/upcoming-series/international
 
 6) update scoreboard.js file, calculate and display total runs, balls, strike rate 
+
+7) display country name, capital, population, Map, Currency using list of object (function components)
+
+8) display Product Name, Photo, Price, Description using list of object (class components)
