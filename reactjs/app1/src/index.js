@@ -1,77 +1,44 @@
 import ReactDOM from 'react-dom/client';
 import "bootstrap/dist/css/bootstrap.min.css";
-function Team(props) 
-{
+import { useState } from 'react';
 
-    return (<div className="col-lg-3">
-        <div className="card">
-            <div className="card-body">
-                <div className='row'>
-                    <div className='col'>
-                        <img src={props.flagUrl} className="img-fluid" />
-                    </div>
-                    <div className='col'>
-                        <p className='fs-6'>{props.name}</p>
-                        <p className='fst-bold'>{props.captain}</p>
+function Login() {
+    //create 2 state variable
+    let [email,setEmail] = useState('');
+    let [password,setPassword] = useState('');
+
+    //create function using 2nd method 
+    let doLogin = function(e){
+        e.preventDefault(); //prevent refreshing webpage
+        console.log(email,password);
+    }
+    return (<div className="container">
+        <div className="row justify-content-center">
+            <div className="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4">
+                <div className="card">
+                    <div className="card-body p-4">
+                        <h1 className="h4 mb-4 text-center">Sign in</h1>
+                        <form onSubmit={doLogin}>
+                            <div className="mb-3">
+                                <label htmlFor="email" className="form-label">Email address</label>
+                                <input type="email" className="form-control" id="email" name="email" value={email} required onChange={(e) => setEmail(e.target.value)} />
+                                <div className="invalid-feedback">Please enter a valid email.</div>
+                            </div>
+                            <div className="mb-3">
+                                <label htmlFor="password" className="form-label">Password</label>
+                                <input type="password" className="form-control" id="password" name="password" value={password} onChange={(e) => setPassword(e.target.value)} minLength={6} required />
+                                <div className="invalid-feedback">Password is required (min 6 characters).</div>
+                            </div>
+                            <div className="d-grid">
+                                <button type="submit" className="btn btn-primary">Login</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>)
 }
-function AsiaCup(props) {
-    let teams = props.teams;
-    return (<div className='container'>
-        <div className="row">
-           {teams.map((item,index) => {
-                return <Team key={index} name={item.name} captain={item.captain} flagUrl={item.flagUrl} />
-           })}
-        </div>
-    </div>)
-}
 const root = ReactDOM.createRoot(document.getElementById('root'));
-//create list of object
-const list = [
-    {
-        name: 'Afghanistan',
-        captain: 'Not Declared', // Squad yet to be officially announced as of Aug 22, 2025 [19]
-        flagUrl: 'https://flagcdn.com/af.svg'
-    },
-    {
-        name: 'Bangladesh',
-        captain: 'Not Declared', // Squad yet to be officially announced as of Aug 22, 2025 [19]
-        flagUrl: 'https://flagcdn.com/bd.svg'
-    },
-    {
-        name: 'Hong Kong',
-        captain: 'Yasim Murtaza', // Confirmed in the official squad announcement [19]
-        flagUrl: 'https://flagcdn.com/hk.svg'
-    },
-    {
-        name: 'India',
-        captain: 'Suryakumar Yadav', // Confirmed by BCCI on August 19, 2025 [20][21][22]
-        flagUrl: 'https://flagcdn.com/in.svg'
-    },
-    {
-        name: 'Oman',
-        captain: 'Not Declared', // Squad yet to be officially announced for Asia Cup 2025 [19]
-        flagUrl: 'https://flagcdn.com/om.svg'
-    },
-    {
-        name: 'Pakistan',
-        captain: 'Not Declared', // Squad yet to be officially announced for Asia Cup 2025 [19]
-        flagUrl: 'https://flagcdn.com/pk.svg'
-    },
-    {
-        name: 'Sri Lanka',
-        captain: 'Not Declared', // Squad yet to be officially announced for Asia Cup 2025 [19]
-        flagUrl: 'https://flagcdn.com/lk.svg'
-    },
-    {
-        name: 'United Arab Emirates',
-        captain: 'Not Declared', // Squad yet to be officially announced for Asia Cup 2025 [19]
-        flagUrl: 'https://flagcdn.com/ae.svg'
-    }
-];
 
-root.render(<AsiaCup teams={list} />)
+root.render(<Login />)
