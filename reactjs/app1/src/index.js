@@ -1,16 +1,37 @@
 import ReactDOM from 'react-dom/client';
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useState } from 'react';
-
+import { useEffect, useState } from 'react';
+import { useCookies, CookiesProvider } from "react-cookie";
 function Login() {
     //create 2 state variable
-    let [email,setEmail] = useState('');
-    let [password,setPassword] = useState('');
+    let [email, setEmail] = useState('');
+    let [password, setPassword] = useState('');
+    let [message, setMessage] = useState('');
+    let [attempt, setAttempt] = useState(1);
+    let [cookies, setCookie, removeCookie] = useCookies(['theeasylearn']);
+
+    useEffect(() => {
+        if (cookies['count'] === undefined) {
+            setCookie('count', '1');
+        }
+        else {
+            setAttempt(parseInt(cookies['count']));
+        }
+    });
 
     //create function using 2nd method 
-    let doLogin = function(e){
+    let doLogin = function (e) {
         e.preventDefault(); //prevent refreshing webpage
-        console.log(email,password);
+        console.log(email, password);
+        if (email === 'admin@gmail.com' && password === '123123') {
+            setMessage('login successful');
+        }
+        else {
+
+            setMessage(`login attempt failed. you have  ${3 - attempt} left`);
+            setCookie('count', attempt + 1); //2
+            setAttempt(attempt + 1); //2
+        }
     }
     return (<div className="container">
         <div className="row justify-content-center">
@@ -30,7 +51,10 @@ function Login() {
                                 <div className="invalid-feedback">Password is required (min 6 characters).</div>
                             </div>
                             <div className="d-grid">
-                                <button type="submit" className="btn btn-primary">Login</button>
+                                <button disabled={attempt == 4} type="submit" className="btn btn-primary">Login</button>
+                            </div>
+                            <div>
+                                {message}
                             </div>
                         </form>
                     </div>
@@ -41,4 +65,6 @@ function Login() {
 }
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(<Login />)
+root.render(<CookiesProvider>
+    <Login />
+</CookiesProvider>);
