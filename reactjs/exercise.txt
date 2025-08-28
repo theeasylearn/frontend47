@@ -21,3 +21,9 @@ https://www.cricbuzz.com/cricket-schedule/upcoming-series/international
 7) display country name, capital, population, Map, Currency using list of object (function components)
 
 8) display Product Name, Photo, Price, Description using list of object (class components)
+
+9) use Reusable components class/function for footer in 26_routing.js
+
+10) create website for school/college using bootstrap 5 theme and convert it into reactjs. 
+    use React Router dom 
+    
