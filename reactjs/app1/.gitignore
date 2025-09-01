@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+reactjs/admin/node_modules
+reactjs/node_modules/
