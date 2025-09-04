@@ -1,6 +1,5 @@
 import Menu from "./menu";
 import NavBar from "./Navbar";
-
 export default function AdminAddCategory() {
     return (<div id="wrapper">
         {/* Sidebar */}
