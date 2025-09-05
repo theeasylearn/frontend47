@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export default function AdminLogin() {
     return (<div className="container">
         <div className="row justify-content-center">
@@ -21,14 +22,14 @@ export default function AdminLogin() {
                                         <div className="form-group">
                                             <input type="password" className="form-control form-control-user" id="exampleInputPassword" placeholder="Password" />
                                         </div>
-                                        <a href="index.html" className="btn btn-primary btn-user btn-block">
+                                        <button type="submit" className="btn btn-primary btn-user btn-block">
                                             Sign in
-                                        </a>
+                                        </button>
                                         <hr />
                                     </form>
                                     <hr />
                                     <div className="text-center">
-                                        <a className="small" href="forgot-password.html">Forgot Password?</a>
+                                        <Link className="small" to='/forgot-password'>Forgot Password?</Link>
                                     </div>
                                 </div>
                             </div>

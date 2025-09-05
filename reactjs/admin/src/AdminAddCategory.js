@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Menu from "./menu";
 import NavBar from "./Navbar";
 export default function AdminAddCategory() {
@@ -16,7 +17,7 @@ export default function AdminAddCategory() {
                     <div className="card shadow mb-4">
                         <div className="card-header py-3 d-flex justify-content-between">
                             <h5 className="m-0 text-dark">New category</h5>
-                            <a href="category.html" className="btn btn-primary">Back</a>
+                            <Link to="/category" className="btn btn-primary">Back</Link>
                         </div>
                         <div className="card-body">
                             <form action method="post">

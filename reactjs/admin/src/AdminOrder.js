@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import NavBar from "./Navbar";
 import Menu from "./menu";
 export default function AdminOrder() {
@@ -37,7 +38,7 @@ export default function AdminOrder() {
                                                 <td>Bhavnagar <br /> 364001</td>
                                                 <td>Confirmed</td>
                                                 <td>
-                                                    <a className="btn btn-primary" href="admin-view-order-detail.html">View</a>
+                                                    <Link className="btn btn-primary" to="/view-order/1">View</Link>
                                                 </td>
                                             </tr>
                                         </tbody>

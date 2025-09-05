@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import NavBar from "./Navbar";
 import Menu from "./menu";
 export default function AdminViewOrder() {
@@ -14,10 +15,10 @@ export default function AdminViewOrder() {
                                 <div className="card-header py-3 d-flex justify-content-between">
                                     <h5 className="m-0 font-weight-bold text-primary">Order (Detail)</h5>
                                     <span>
-                                        <a href="admin_orders.html" className="btn btn-primary btn-sm">Back
-                                        </a>
-                                        <a href="admin_print_order.html" className="btn btn-secondary btn-sm">Print
-                                        </a>
+                                        <Link to='/order' className="btn btn-primary btn-sm">Back
+                                        </Link>
+                                        <Link to="/print-order/1" className="btn btn-secondary btn-sm">Print
+                                        </Link>
                                     </span>
                                 </div>
                                 <div className="card-body">

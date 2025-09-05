@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import NavBar from "./Navbar";
 import Menu from "./menu";
 export default function AdminEditProduct() {
@@ -13,8 +14,8 @@ export default function AdminEditProduct() {
                             <div className="card shadow mb-4">
                                 <div className="card-header py-3 d-flex justify-content-between">
                                     <h5 className="m-0 font-weight-bold text-primary">Products (edit)</h5>
-                                    <a href="admin_product.html" className="btn btn-primary btn-sm">back
-                                    </a>
+                                    <Link to='/product' className="btn btn-primary btn-sm">back
+                                    </Link>
                                 </div>
                                 <div className="card-body">
                                     <form>

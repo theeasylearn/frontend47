@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Menu from "./menu";
 import NavBar from "./Navbar";
 export default function AdminCategory() {
@@ -14,9 +15,9 @@ export default function AdminCategory() {
                             <div className="card shadow mb-4">
                                 <div className="card-header py-3 d-flex justify-content-between">
                                     <h5 className="m-0 font-weight-bold text-primary">Category</h5>
-                                    <a href="admin_add_category.html" className="btn btn-primary btn-sm">Add
+                                    <Link to='/add-category' className="btn btn-primary btn-sm">Add
                                         <i className="fa fa-plus" />
-                                    </a>
+                                    </Link>
                                 </div>
                                 <div className="card-body">
                                     <table className="table table-bordered table-striped">
@@ -40,7 +41,7 @@ export default function AdminCategory() {
                                                 <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ea fugit iste est! Eum beatae fuga ipsam temporibus culpa, id sunt dignissimos. Numquam natus tenetur repellat quidem reiciendis, dicta eligendi.</td>
                                                 <td>Yes</td>
                                                 <td width="15%">
-                                                    <a href="admin_edit_category.html" className="btn btn-warning btn-sm">Edit</a>
+                                                    <Link to="/edit-category/1" className="btn btn-warning btn-sm">Edit</Link>
                                                     <a href="#" className="btn btn-danger btn-sm">Delete</a>
                                                 </td>
                                             </tr>
