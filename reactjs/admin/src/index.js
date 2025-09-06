@@ -35,7 +35,7 @@ function MyRouter() {
         <Route path="/view-product/:id" element={<AdminViewProduct />} />
         <Route path="/order" element={<AdminOrder />} />
         <Route path="/view-order/:id" element={<AdminViewOrder />} />
-        <Route path="/print-order/:id" element={<AdminPrintOrder />} />
+        <Route path="/d:id" element={<AdminPrintOrder />} />
         <Route path="/users" element={<AdminUser />} />
         {/* define 404 route which handle request for non existing routes */}
         <Route path='*' element={<AdminPageNotFound />} />
